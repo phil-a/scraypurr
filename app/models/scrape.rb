@@ -14,7 +14,7 @@ class Scrape
         self.director = doc.at("//span[@itemprop = 'name']").text
         self.genre = doc.at("//span[@itemprop = 'genre']").text
         self.runtime = doc.at("//time[@itemprop = 'duration']").text
-        self.synopsis = doc.css("#movieSynopsis").text.tidy_bytes
+        self.synopsis = doc.css("#movieSynopsis").text.tidy_bytes[1..-6]
 
         return true
       rescue Exception => e
