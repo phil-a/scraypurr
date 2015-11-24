@@ -26,6 +26,7 @@ class MoviesController < ApplicationController
         rating: @movie_data.rating,
         genre: @movie_data.genre,
         director: @movie_data.director,
+        release_date: @movie_data.release_date,
         runtime: @movie_data.runtime
         )
     else

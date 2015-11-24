@@ -13,6 +13,7 @@ class Scrape
         self.rating = doc.at("//td[@itemprop = 'contentRating']").text
         self.director = doc.at("//span[@itemprop = 'name']").text
         self.genre = doc.at("//span[@itemprop = 'genre']").text
+        self.release_date = doc.at("//td[@itemprop = 'datePublished']").text
         self.runtime = doc.at("//time[@itemprop = 'duration']").text
         self.synopsis = doc.css("#movieSynopsis").text.tidy_bytes[1..-6]
 
